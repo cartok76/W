@@ -30,4 +30,10 @@ class UserController extends Controller
     {
         $this->show('user/inscription');
     }
+    public function form()
+    {
+
+        $this->show('user/form');
+    }
+
 }

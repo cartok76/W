@@ -6,12 +6,11 @@ use W\Model\UsersModel;
 class LoginModel extends UsersModel
 {
     public $email;
-    public function __construct($email)
+    public function login($email)
     {
-        $a = $this -> getUserByUsernameOrEmail($email);
 
         if ($this -> getUserByUsernameOrEmail($email)) {
-            session_start();
+           return true;
         }
         else {
             session_unset();
